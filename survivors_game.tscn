@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://00l6rekgxob"]
+
+[ext_resource type="PackedScene" uid="uid://cspbc2dya4cgc" path="res://player.tscn" id="1_28iup"]
+[ext_resource type="PackedScene" uid="uid://ckk5kcox37w48" path="res://pine_tree.tscn" id="2_r60le"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1045.0
+offset_bottom = 772.0
+
+[node name="Player" parent="." instance=ExtResource("1_28iup")]
+position = Vector2(498, 391)
+
+[node name="PineTree" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(229, 170)
+
+[node name="PineTree2" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(811, 188)
+
+[node name="PineTree3" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(592, 635)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(861, 249)
+
+[node name="PineTree5" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(740, 240)
+
+[node name="PineTree6" parent="." instance=ExtResource("2_r60le")]
+position = Vector2(225, 496)
