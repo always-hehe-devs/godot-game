@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cspbc2dya4cgc"]
+[gd_scene load_steps=8 format=3 uid="uid://cspbc2dya4cgc"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_rokjt"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_ww8sl"]
@@ -9,6 +9,20 @@ radius = 30.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bmeo4"]
 radius = 39.6232
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guw6o"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_un57n"]
+bg_color = Color(0, 0.709804, 0.00784314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_rokjt")
@@ -32,3 +46,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CircleShape2D_bmeo4")
 debug_color = Color(0.933333, 0.141176, 0.533333, 0.419608)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -116.0
+offset_top = -145.0
+offset_right = 116.0
+offset_bottom = -118.0
+theme_override_styles/background = SubResource("StyleBoxFlat_guw6o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_un57n")
+value = 100.0
+show_percentage = false
